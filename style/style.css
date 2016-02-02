@@ -1,0 +1,316 @@
+/*
+
+STYLESHEET FOR: 
+CSS TO THE RESCUE,
+FLEXBOX PRACTICE
+
+AUTHOR: EMIEL ZUURBIER
+GITHUB: https://github.com/EmielZuurbier/CTTR
+
+*/
+
+
+/* ----------------------------------------------- GENERAL */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+/*    overflow-x: hidden;*/
+    font-family: helvetica, arial, sans-serif;
+}
+
+/* ----------------------------------------------- TEXT */
+
+h1, h2, h3, h4, h5 ,h6, p, a, b, strong, i, q, em, blockquote, address, legend, label, input {
+    font-style: normal;
+}
+
+h1 {
+    
+}
+
+p, a, i {
+    font-weight: 200;
+}
+
+p {
+    color: #888888;
+}
+
+b, strong, em {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ----------------------------------------------- TOOLS */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+svg {
+    height: 100%;
+    width: auto;
+    max-width: 3em;
+    max-height: 3em;
+}
+
+form {
+    flex: 1;
+    border: 0;
+    outline: 0;
+}
+
+form fieldset {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    border: 0;
+}
+
+form legend {
+    border: 0;
+    outline: 0;
+    margin-bottom: 1em;
+}
+
+form label {
+}
+
+form label input {
+    display: block;
+    padding: 0.5em;
+    border: 0;
+    border-bottom: 2px solid #888888;
+}
+
+form button {
+    position: relative;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    background-color: #6d87de;
+    color: #ffffff;
+    padding: 0.8em 1.5em;
+    margin: 0.5em 0.5em 1em 0;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+form button::after, form button::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background-color: black;
+    z-index: -1;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+form button::before {
+    left: -50%;
+}
+
+form button::after {
+    left: 100%;
+}
+
+form button:hover {
+    background-color: transparent;
+}
+
+form button:hover::before {
+    left: 0%;
+}
+
+form button:hover::after {
+    left: 50%;
+}
+
+/* ----------------------------------------------- BLOCKS */
+
+body > header {
+/*    position: fixed;*/
+    flex: 1 1 200px;
+    order: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5em;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+body > header h1 {
+    font-size: 1.5em;
+    font-weight: 200;
+    margin-bottom: 1em;
+}
+
+body > header figure {
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 1em;
+    height: auto;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+body > header figure:hover {
+    transform: scale(0.8);
+}
+
+body > header p {
+    text-align: center;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+body > header nav {
+    flex: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+body > header nav ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+body > header nav ul li {
+    list-style: none;
+}
+
+body > header nav ul li a {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 30px;
+    color: #444444;
+}
+
+body > header nav ul li a svg {
+    height: 1em;
+    width: auto;
+    margin-right: 1em;
+    fill: #ffffff;
+}
+
+main {
+/*    position: relative;*/
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 5 1 400px;
+    order: 2;
+    padding: 1.5em 0 0 1.5em;
+    background-color: #f5f5f5;
+}
+
+article {
+    flex: 10 1 350px;;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1.5em;
+    margin: 0 1.5em 1.5em 0;
+}
+
+article header {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+article header h1 {
+    font-size: 1.5em;
+}
+
+article header h1 span {
+    font-size: 50%;
+}
+
+article header h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+article figure {
+    flex: 1 1 50%;
+}
+
+footer {
+    flex: 1 1 100%;
+    order: 3;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+}
