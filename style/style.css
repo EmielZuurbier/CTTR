@@ -361,6 +361,11 @@ article {
     margin: 0 1.5em 1.5em 0;
 }
 
+article a {
+    color: #5695B3;
+    font-weight: bolder;
+}
+
 article header {
     flex: 1 1 100%;
     margin-bottom: 1em;
@@ -458,6 +463,16 @@ footer ul li {
 
 footer ul li a {
     color: #5695B3;
+    opacity: 1;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+footer ul li a:hover {
+    opacity: 0.5;
 }
 
 footer address {
