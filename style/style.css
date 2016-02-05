@@ -100,6 +100,9 @@ form legend {
 }
 
 form label {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
@@ -200,6 +203,10 @@ body > header {
     order: 1 1 250px;
     left: 0;
     top: 0;
+    -webkit-box-flex: 1 1 200p1;
+    -moz-box-flex:  1 1 200p1;
+    -webkit-flex:  1 1 200p1;
+    -ms-flex:  1 1 200p1;
     flex: 1 1 200px;
     order: 1;
     display: -webkit-box;
@@ -253,6 +260,10 @@ body > header p {
 }
 
 body > header nav {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     display: -webkit-box;
     display: -moz-box;
@@ -271,6 +282,10 @@ body > header nav ul {
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
@@ -335,6 +350,10 @@ body > header nav ul li a svg {
 
 main {
     order: 2;
+    -webkit-box-flex: 5 1 400px;
+    -moz-box-flex: 5 1 400px;
+    -webkit-flex: 5 1 400px;
+    -ms-flex: 5 1 400px;
     flex: 5 1 400px;
     display: -webkit-box;
     display: -moz-box;
@@ -348,7 +367,11 @@ main {
 }
 
 article {
-    flex: 10 0.5 350px;;
+    -webkit-box-flex: 10 300px;
+    -moz-box-flex: 10 300px;
+    -webkit-flex: 10 300px;
+    -ms-flex: 10 300px;
+    flex: 10 300px;;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -367,6 +390,10 @@ article a {
 }
 
 article header {
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     margin-bottom: 1em;
     border-bottom: 1px solid #f5f5f5;
@@ -384,6 +411,10 @@ article header h2 {
 }
 
 article figure {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     position: relative;
     display: block;
@@ -454,6 +485,10 @@ footer {
 
 footer nav {
     order: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
@@ -477,10 +512,18 @@ footer ul li a:hover {
 
 footer address {
     order: 3;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
 footer > ul {
     order: 2;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1
 }
