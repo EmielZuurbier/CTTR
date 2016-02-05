@@ -469,6 +469,10 @@ article figure figcaption svg {
 }
 
 footer {
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     order: 4;
     display: -webkit-box;
