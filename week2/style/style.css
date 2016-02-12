@@ -7,6 +7,7 @@ FLEXBOX PRACTICE
 AUTHOR: EMIEL ZUURBIER
 GITHUB: https://github.com/EmielZuurbier/CTTR
 
+
 */
 
 @font-face {
@@ -93,6 +94,10 @@ svg {
 }
 
 form {
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     border: 0;
     outline: 0;
@@ -104,6 +109,11 @@ form fieldset {
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
     border: 0;
 }
 
@@ -154,7 +164,7 @@ form label span {
     transition: 0.5s ease-in-out;
 }
 
-form button {
+[role=button] {
     position: relative;
     outline: 0;
     border: 0;
@@ -176,7 +186,7 @@ form button {
     transition: 0.5s;
 }
 
-form button::after, form button::before {
+[role=button]::after, [role=button]::before {
     content: "";
     position: absolute;
     width: 50%;
@@ -191,24 +201,112 @@ form button::after, form button::before {
     transition: 0.5s ease-in-out;
 }
 
-form button::before {
+[role=button]::before {
     left: -50%;
 }
 
-form button::after {
+[role=button]::after {
     left: 100%;
 }
 
-form button:hover {
+[role=button]:hover {
     background-color: transparent;
 }
 
-form button:hover::before {
+[role=button]:hover::before {
     left: 0%;
 }
 
-form button:hover::after {
+[role=button]:hover::after {
     left: 50%;
+}
+
+[role=close] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: rgb(97, 166, 199);
+    color: #ffffff;
+    z-index: 99;
+}
+
+figure {
+    -webkit-box-flex: 1 2 400px;
+    -moz-box-flex: 1 2 400px;
+    -webkit-flex: 1 2 400px;
+    -ms-flex: 1 2 400px;
+    flex: 1 2 400px;
+    position: relative;
+    display: block;
+    margin: 0 1em 1em 0;
+    overflow: hidden;
+    max-width: 400px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+figure:last-of-type {
+    margin-right: 0;
+}
+
+
+
+figure img {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    border-radius: 1em;
+}
+
+figure:hover img {
+    transform: scale(1.2);
+}
+
+figure figcaption {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    background-color: rgba(97, 166, 199, 0.5);
+    color: #ffffff;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
+figure figcaption svg {
+    display: block;
+    height: 16px;
+    margin-right: 5px;
+    fill: #ffffff;
 }
 
 /* ----------------------------------------------- BLOCKS */
@@ -245,6 +343,11 @@ body > header h1 {
 }
 
 header figure {
+    -webkit-box-flex: none;
+    -moz-box-flex:  none;
+    -webkit-flex:  none;
+    -ms-flex:  none;
+    flex: none;
     display: block;
     border: 5px solid #ffffff;
     border-radius: 50%;
@@ -335,21 +438,20 @@ header nav a::before {
     position: absolute;
     display: block;
     width: 100%;
-    height: 1px;
+    height: 100%;
     bottom: 0;
     left: -100%;
     background-color: #43738A;
-/*    z-index: -1;*/
     -webkit-transition: 0.5s ease-in-out;
     -moz-transition: 0.5s ease-in-out;
     -ms-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
-    z-index: 1;
+    z-index: -1;
 }
 
 header nav a:hover {
-    color: #43738A;
+    color: #ffffff;
 }
 
 header nav a:hover::before {
@@ -410,7 +512,8 @@ article header {
     -webkit-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
     border-bottom: 1px solid #f5f5f5;
 }
 
@@ -425,62 +528,123 @@ article header h2 {
     font-weight: 400;
 }
 
-article figure {
-    -webkit-box-flex: 1 2 400px;
-    -moz-box-flex: 1 2 400px;
-    -webkit-flex: 1 2 400px;
-    -ms-flex: 1 2 400px;
-    flex: 1 2 400px;
-    position: relative;
-    display: block;
-    margin: 0 1em 1em 0;
-    overflow: hidden;
-/*    max-width: 400px;*/
+#profile-picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    display: none;
+    box-shadow: 0 0 0 50vmax rgba(97, 166, 199, 0.5);
+    height: auto;
+    width: 50vw;
 }
 
-article figure img {
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-}
-
-article figure:hover img {
-    transform: scale(1.2);
-}
-
-article figure figcaption {
+#profile-picture:target {
+    -webkit-box-flex: 10 300px;
+    -moz-box-flex: 10 300px;
+    -webkit-flex: 10 300px;
+    -ms-flex: 10 300px;
+    flex: 10 300px;;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0; 
-    left: 0;
-    background-color: rgba(97, 166, 199, 0.5);
-    color: #ffffff;
-    opacity: 0;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: #ffffff;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
-article figure:hover figcaption {
-    opacity: 1;
+#profile-picture div:first-of-type {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-flex: 1 1 25%;
+    -moz-box-flex: 1 1 25%;
+    -webkit-flex: 1 1 25%;
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
 }
 
-article figure figcaption svg {
-    display: block;
-    height: 16px;
-    margin-right: 5px;
-    fill: #ffffff;
+#profile-picture div:nth-of-type(2) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1em;
+    -webkit-box-flex: 2 1 calc(75% - 1em);
+    -moz-box-flex: 2 1 calc(75% - 1em);
+    -webkit-flex: 2 1 calc(75% - 1em);
+    -ms-flex: 2 1 calc(75% - 1em);
+    flex: 2 1 calc(75% - 1em);
+}
+
+.filter-effects {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+}
+
+.filter-effects header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+}
+
+.filter-effects figure {
+    -webkit-box-flex: 1 3 50px;
+    -moz-box-flex: 1 3 50px;
+    -webkit-flex: 1 3 50px;
+    -ms-flex: 1 3 50px;
+    flex: 1 3 50px;
+    cursor: pointer;
+}
+
+[alt$=lighten] {
+    -webkit-filter: brightness(1.1);
+    filter: brightness(1.1);
+}
+
+[alt$=overlay] {
+    -webkit-filter: contrast(2);
+    filter: contrast(2);
+}
+
+[alt$=soft light] {
+    -webkit-filter: opacity(0.5);
+    filter: opacity(0.5);
+}
+
+[alt$=color] {
+    -webkit-filter: hue-rotate(90deg);
+    filter: hue-rotate(90deg);
+}
+
+[alt$=difference] {
+    -webkit-filter: invert(0.8);
+    filter: invert(0.8);
 }
 
 footer {
@@ -545,4 +709,16 @@ footer > ul {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1
+}
+
+/* ------------------------------------------------- ANIMATION */
+
+@-webkit-keyframes fadein {
+    from   { opacity: 0; }
+    to     { opacity: 1; }
+}
+
+@keyframes fadein {
+    from   { opacity: 0; }
+    to     { opacity: 1; }
 }
