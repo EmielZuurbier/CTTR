@@ -1,4 +1,4 @@
-CSS To The Rescue
+CSS To The Rescue - Week 2
 =================
 
 **Emiel Zuurbier**  
@@ -7,4 +7,4 @@ CSS To The Rescue
 Live version
 ------------
 
-http://emielzuurbier.github.io/CTTR/
+http://emielzuurbier.github.io/CTTR/week2/
