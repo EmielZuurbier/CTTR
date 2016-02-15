@@ -89,8 +89,8 @@ img {
 svg {
     height: 100%;
     width: auto;
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 5em;
+    max-height: 5em;
 }
 
 form {
@@ -108,7 +108,7 @@ form fieldset {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     -webkit-box-flex: 1 1 100%;
     -moz-box-flex: 1 1 100%;
     -webkit-flex: 1 1 100%;
@@ -129,6 +129,11 @@ form label {
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
     margin-bottom: 1em;
 }
 
@@ -136,7 +141,7 @@ form label input {
     width: 100%;
     padding: 0.5em 0;
     border: 0;
-    border-bottom: 1px solid #888888;
+    border-bottom: 0.0625em solid #888888;
     -webkit-transition: 0.5s ease-in-out;
     -moz-transition: 0.5s ease-in-out;
     -ms-transition: 0.5s ease-in-out;
@@ -156,7 +161,6 @@ form label input:focus + span {
 
 form label span {
     font-size: 75%;
-    min-width: 100px;
     -webkit-transition: 0.5s ease-in-out;
     -moz-transition: 0.5s ease-in-out;
     -ms-transition: 0.5s ease-in-out;
@@ -168,7 +172,7 @@ form label span {
     position: relative;
     outline: 0;
     border: 0;
-    border-radius: 4px;
+    border-radius: 0.25em;
     background-color: #6DB9DE;
     color: #ffffff;
     padding: 0.8em 1.5em;
@@ -221,7 +225,7 @@ form label span {
     left: 50%;
 }
 
-[role=close] {
+.close {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -240,16 +244,16 @@ form label span {
 }
 
 figure {
-    -webkit-box-flex: 1 2 400px;
-    -moz-box-flex: 1 2 400px;
-    -webkit-flex: 1 2 400px;
-    -ms-flex: 1 2 400px;
-    flex: 1 2 400px;
+    -webkit-box-flex: 1 2 25em;
+    -moz-box-flex: 1 2 25em;
+    -webkit-flex: 1 2 25em;
+    -ms-flex: 1 2 25em;
+    flex: 1 2 25em;
     position: relative;
     display: block;
     margin: 0 1em 1em 0;
     overflow: hidden;
-    max-width: 400px;
+    max-width: 25em;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
@@ -304,8 +308,8 @@ figure:hover figcaption {
 
 figure figcaption svg {
     display: block;
-    height: 16px;
-    margin-right: 5px;
+    height: 1em;
+    margin-right: 0.3em;
     fill: #ffffff;
 }
 
@@ -315,11 +319,11 @@ body > header {
     order: 1;
     left: 0;
     top: 0;
-    -webkit-box-flex: 1 1 200px;
-    -moz-box-flex:  1 1 200px;
-    -webkit-flex:  1 1 200px;
-    -ms-flex:  1 1 200px;
-    flex: 1 1 200px;
+    -webkit-box-flex: 1 1 12.5em;
+    -moz-box-flex:  1 1 12.5em;
+    -webkit-flex:  1 1 12.5em;
+    -ms-flex:  1 1 12.5em;
+    flex: 1 1 12.5em;
     order: 1;
     display: -webkit-box;
     display: -moz-box;
@@ -349,7 +353,7 @@ header figure {
     -ms-flex:  none;
     flex: none;
     display: block;
-    border: 5px solid #ffffff;
+    border: 0.3em solid #ffffff;
     border-radius: 50%;
     margin-bottom: 1em;
     height: auto;
@@ -366,7 +370,7 @@ header figure:hover {
 }
 
 header figure img {
-    width: 100px;
+    width: 6.25em;
 }
 
 body > header p {
@@ -420,7 +424,7 @@ header nav a {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    height: 30px;
+    height: 1.875em;
     padding: 0 1.5em;
     color: #ffffff;
     overflow: hidden;
@@ -467,11 +471,11 @@ header nav a svg {
 
 main {
     order: 2;
-    -webkit-box-flex: 5 1 400px;
-    -moz-box-flex: 5 1 400px;
-    -webkit-flex: 5 1 400px;
-    -ms-flex: 5 1 400px;
-    flex: 5 1 400px;
+    -webkit-box-flex: 5 1 25em;
+    -moz-box-flex: 5 1 25em;
+    -webkit-flex: 5 1 25em;
+    -ms-flex: 5 1 25em;
+    flex: 5 1 25em;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -484,11 +488,11 @@ main {
 }
 
 article {
-    -webkit-box-flex: 10 300px;
-    -moz-box-flex: 10 300px;
-    -webkit-flex: 10 300px;
-    -ms-flex: 10 300px;
-    flex: 10 300px;;
+    -webkit-box-flex: 10 18.75em;
+    -moz-box-flex: 10 18.75em;
+    -webkit-flex: 10 18.75em;
+    -ms-flex: 10 18.75em;
+    flex: 10 18.75em;;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -514,7 +518,8 @@ article header {
     flex: 1 1 100%;
     margin-bottom: 1.5em;
     margin-top: 1em;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 0.0625em solid #f5f5f5;
+    min-width: 15em;
 }
 
 article header h1 span {
@@ -535,17 +540,17 @@ article header h2 {
     transform: translate(-50%, -50%);
     z-index: 99;
     display: none;
-    box-shadow: 0 0 0 50vmax rgba(97, 166, 199, 0.5);
+    box-shadow: 0 0 0 50vmax rgba(97, 166, 199, 0.8);
     height: auto;
     width: 50vw;
 }
 
 #profile-picture:target {
-    -webkit-box-flex: 10 300px;
-    -moz-box-flex: 10 300px;
-    -webkit-flex: 10 300px;
-    -ms-flex: 10 300px;
-    flex: 10 300px;;
+    -webkit-box-flex: 10 18.75em;
+    -moz-box-flex: 10 18.75em;
+    -webkit-flex: 10 18.75em;
+    -ms-flex: 10 18.75em;
+    flex: 10 18.75em;;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -586,6 +591,10 @@ article header h2 {
     flex: 2 1 calc(75% - 1em);
 }
 
+#photo-albums {
+    max-width: min-content;
+}
+
 .filter-effects {
     display: -webkit-box;
     display: -moz-box;
@@ -614,11 +623,11 @@ article header h2 {
 }
 
 .filter-effects figure {
-    -webkit-box-flex: 1 3 50px;
-    -moz-box-flex: 1 3 50px;
-    -webkit-flex: 1 3 50px;
-    -ms-flex: 1 3 50px;
-    flex: 1 3 50px;
+    -webkit-box-flex: 1 3 3.125em;
+    -moz-box-flex: 1 3 3.125em;
+    -webkit-flex: 1 3 3.125em;
+    -ms-flex: 1 3 3.125em;
+    flex: 1 3 3.125em;
     cursor: pointer;
 }
 
