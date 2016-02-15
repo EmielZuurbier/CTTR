@@ -108,7 +108,7 @@ form fieldset {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     -webkit-box-flex: 1 1 100%;
     -moz-box-flex: 1 1 100%;
     -webkit-flex: 1 1 100%;
@@ -129,6 +129,11 @@ form label {
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
     margin-bottom: 1em;
 }
 
@@ -514,6 +519,7 @@ article header {
     margin-bottom: 1.5em;
     margin-top: 1em;
     border-bottom: 0.0625em solid #f5f5f5;
+    min-width: 15em;
 }
 
 article header h1 span {
@@ -583,6 +589,10 @@ article header h2 {
     -webkit-flex: 2 1 calc(75% - 1em);
     -ms-flex: 2 1 calc(75% - 1em);
     flex: 2 1 calc(75% - 1em);
+}
+
+#photo-albums {
+    max-width: min-content;
 }
 
 .filter-effects {
