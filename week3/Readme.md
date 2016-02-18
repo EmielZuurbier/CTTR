@@ -1,4 +1,4 @@
-CSS To The Rescue - Week 2
+CSS To The Rescue - Week 3
 =================
 
 **Emiel Zuurbier**  
